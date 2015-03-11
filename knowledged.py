@@ -26,7 +26,7 @@ def question(text,mic,profile):
 
     if len(query.pods) > 0:
         texts = ""
-        pod = res.pods[1]
+        pod = query.pods[1]
         if pod.text:
             texts = pod.text
         else:
