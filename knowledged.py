@@ -4,26 +4,17 @@ import re
 import wolframalpha
 import time
 import sys
+from sys import maxint
+
 from client import jasperpath
-WORDS = ["SEARCH"]
-PRIORITY = 1
+WORDS = ["WHO", "WHAT", "HOW MUCH", "HOW MANY", "HOW OLD"]
 
 
 def handle(text, mic, profile):
-    messages=["What would you like know?",
-        " what are you looking for?"]
-    messages=random.choice(messages)
-    mic.say(messages)
-    question(mic.activeListen(),mic,profile)
-
-
-def question(text,mic,profile):
-
-    app_id=profile['keys']['WOLFRAMALPHA']
+    app_id = profile['keys']['WOLFRAMALPHA']
     client = wolframalpha.Client(app_id)
 
     query = client.query(text)
-
     if len(query.pods) > 0:
         texts = ""
         pod = query.pods[1]
@@ -36,5 +27,19 @@ def question(text,mic,profile):
     else:
         mic.say("Sorry, Could you be more specific?.")
 
+
+
+
 def isValid(text):
-    return bool(re.search(r'\bsearch\b', text, re.IGNORECASE))
+    if re.search(r'\bwho\b', text, re.IGNORECASE):
+        return True
+    elif re.search(r'\bwhat\b', text, re.IGNORECASE):
+        return True
+    elif re.search(r'\bhow much\b', text, re.IGNORECASE):
+        return True
+    elif re.search(r'\bhow MANY\b', text, re.IGNORECASE):
+        return True
+    elif re.search(r'\bhow old\b', text, re.IGNORECASE):
+        return True
+    else:
+        return False
