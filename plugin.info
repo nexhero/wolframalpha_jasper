@@ -1,0 +1,15 @@
+[Plugin]
+Name = wolfram
+Version = 1.0.2
+License = MIT
+URL = https://github.com/gglass/wolframalpha_jasper
+Description = Query the Wolfram Alpha Engine
+
+[Author]
+Name = David Pereira
+URL = https://github.com/nexhero
+
+[Author]
+Name = gglass
+URL = https://github.com/gglass
+Description = Updates for Jasper V2 Compatibility
