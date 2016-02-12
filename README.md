@@ -11,5 +11,5 @@ Note: The command WHERE is not inclued because the api return images, no text
 Add this in your profile.yml file
 ```yml
 keys:
-     WOLFRAMALPHA: XXXXX-XXXXXV8VL6
+     WOLFRAMALPHA: 'XXXXX-XXXXXV8VL6'
 ```
