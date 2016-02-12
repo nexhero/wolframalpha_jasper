@@ -1,6 +1,14 @@
 # wolframalpha_jasper
 Using Wolframalpha with Jasper.
 
+#Prerequisites
+Intall wolframalpha python library
+```bash
+sudo pip install wolframalpha
+```
+
+Sign up for API:
+https://developer.wolframalpha.com/portal/apisignup.html
 
 #Commands
 WHO, WHAT, HOW MUCH, HOW MANY, HOW OLD
